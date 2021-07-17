@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  width: 100vw;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#app {
+  padding-top: 51px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  #app {
+    padding-top: 0;
+  }
+}
+
+.colors {
+  background-color: rgb(71, 44, 52);
+}
