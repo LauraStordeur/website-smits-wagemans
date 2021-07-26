@@ -79,14 +79,18 @@ class TimeElement extends HTMLElement {
     }
 
     .logo {
+      display: none;
       flex-grow: 1;
-      max-width: 550px;
+      max-width: 450px;
       background-color: black;
     }
 
     @media only screen and (max-width: 600px) {
       .logo {
-        width: 100vw;
+        display: block;
+        width: 250px;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       .description-block {
         width: 100vw;
@@ -103,10 +107,10 @@ class TimeElement extends HTMLElement {
 
   _logoElement() {
     const element = document.createElement("img");
-    element.src = "static/assets/logo.jpg";
+    element.src = "static/assets/smitsLogo.png";
     element.className = "logo";
 
-    return "";
+    return element;
   }
 
   _timeElement({ day, hours }) {
@@ -145,7 +149,7 @@ class TimeElement extends HTMLElement {
   }
 
   _announcementsElement() {
-    const text = "We zijn gesloten vanaf 12 augustus tot en met 28 september 2021.";
+    const text = "We zijn op jaarlijks verlof vanaf 12 augustus tot en met 28 september 2021.";
 
     const element = document.createElement("div");
     element.className = "announcements";

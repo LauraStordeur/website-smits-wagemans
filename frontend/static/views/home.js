@@ -21,12 +21,12 @@ class HomeComponent extends HTMLElement {
 
   _logoElement() {
     const logo = document.createElement("img");
-    logo.src = "/static/assets/logo.jpg";
+    logo.src = "/static/assets/smitsLogo.png";
     logo.className = "logo";
 
     const element = document.createElement("div");
     element.className = "images";
-    element.append(this._pictureElement());
+    element.append(this._pictureElement(), logo);
 
     return element;
   }
@@ -83,7 +83,11 @@ class HomeComponent extends HTMLElement {
       }
 
       .logo {
+        display: block;
         width: 100%;
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       .picture {
         width: 100%;
@@ -103,7 +107,7 @@ class HomeComponent extends HTMLElement {
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
         .container {
-          min-width: calc(100vw - 250px);
+          width: 100%;
           height: 100vh;
           background-image:url("/static/assets/pendant.jpeg");
           background-size: cover;
@@ -116,12 +120,7 @@ class HomeComponent extends HTMLElement {
           overflow: auto;
         }
         .logo {
-          background-color: black;
-          height: 300px;
-          width: 450px;
-          display: block;
-          align-self: center;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          display: none;
         }
         .description-block {
           color: silver;

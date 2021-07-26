@@ -69,14 +69,16 @@
     }
 
     .logo {
-      flex-grow: 1;
-      max-width: 550px;
-      background-color: black;
+      display: none;
     }
 
     @media only screen and (max-width: 600px) {
       .logo {
+        display: block;
         width: 100%;
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       .description-block {
         width: 100%;
@@ -125,10 +127,10 @@
 
   _logoElement() {
     const element = document.createElement("img");
-    element.src = "static/assets/logo.jpg";
+    element.src = "static/assets/smitsLogo.png";
     element.className = "logo";
 
-    return '';
+    return element;
   }
 
 

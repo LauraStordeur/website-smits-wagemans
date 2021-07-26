@@ -83,9 +83,22 @@ class SidebarComponent extends HTMLElement {
         position: fixed;
       }
 
+      .image {
+        display: none;
+      }
+
       @media screen and (min-width: 600px) {
         :host {
           display: inline-block;
+        }
+
+        .image {
+          display: block;
+          width: 220px;
+          height: 100px;
+          background-image: url("static/assets/smitsLogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
         }
 
         .menu {
@@ -94,7 +107,7 @@ class SidebarComponent extends HTMLElement {
 
         .nav {
           display: flex;
-          width: 250px;
+          width: 230px;
           height: 100vh;
           position: initial;
         }
@@ -110,13 +123,14 @@ class SidebarComponent extends HTMLElement {
     content.innerHTML = `
     <button id="menu" class="menu">Menu</button>
     <nav class="nav" id="nav">
+      <div class="image"></div>
       <a href="/" class="nav-link" data-link>Over ons</a>
       <a href="/uren" class="nav-link" data-link>Openingsuren</a>
       <a href="/juwelen" class="nav-link" data-link>Juwelen merken</a>
       <a href="/uurwerken" class="nav-link" data-link>Uurwerken merken</a>
       <a href="/contact" class="nav-link" data-link>Ons bereiken</a>
-    </nav>`;
-
+    </nav>
+    `;
     return content;
   }
 

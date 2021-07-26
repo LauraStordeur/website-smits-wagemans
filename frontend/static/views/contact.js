@@ -79,9 +79,7 @@ class ContactElement extends HTMLElement {
     }
 
     .logo {
-      flex-grow: 1;
-      max-width: 550px;
-      background-color: black;
+      display: none;
     }
 
     .link-wrapper {
@@ -102,7 +100,11 @@ class ContactElement extends HTMLElement {
     }
     @media only screen and (max-width: 600px) {
       .logo {
-        width: 100vw;
+        display: block;
+        width: 100%;
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       .description-block {
         width: 100vw;
@@ -125,7 +127,7 @@ class ContactElement extends HTMLElement {
 
   _logoElement() {
     const element = document.createElement("img");
-    element.src = "static/assets/logo.jpg";
+    element.src = "static/assets/smitsLogo.png";
     element.className = "logo";
 
     return element;
@@ -133,7 +135,7 @@ class ContactElement extends HTMLElement {
 
   _announcementsElement() {
     const text =
-      "We zijn gesloten vanaf 15 augustus tot en met 28 september 2021.";
+      "We zijn op jaarlijks verlof vanaf 12 augustus tot en met 28 september 2021.";
 
     const element = document.createElement("div");
     element.className = "announcements";
@@ -182,8 +184,8 @@ class ContactElement extends HTMLElement {
   _createContent() {
     const content = document.createElement("div");
     content.id = "page";
-    content.append(this._announcementsElement(), this._descriptionElement());
     content.append(this._logoElement());
+    content.append(this._announcementsElement(), this._descriptionElement());
 
     return content;
   }
