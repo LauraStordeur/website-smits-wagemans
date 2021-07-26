@@ -132,7 +132,7 @@ class WatchesElement extends HTMLElement {
     element.src = "static/assets/logo.jpg";
     element.className = "logo";
 
-    return element;
+    return "";
   }
   _descriptionElement() {
     const element = document.createElement("section");

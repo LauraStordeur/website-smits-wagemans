@@ -58,7 +58,7 @@ class TimeElement extends HTMLElement {
     }
 
     .description-block {
-      background: rgb(50, 50, 50, 0.9);
+      background: rgb(50, 50, 50, 0.7);
       color: silver;
       flex-grow: 1;
       padding: 10px;
@@ -106,7 +106,7 @@ class TimeElement extends HTMLElement {
     element.src = "static/assets/logo.jpg";
     element.className = "logo";
 
-    return element;
+    return "";
   }
 
   _timeElement({ day, hours }) {
@@ -145,7 +145,7 @@ class TimeElement extends HTMLElement {
   }
 
   _announcementsElement() {
-    const text = "We zijn gesloten vanaf 15 augustus tot en met 28 september 2021.";
+    const text = "We zijn gesloten vanaf 12 augustus tot en met 28 september 2021.";
 
     const element = document.createElement("div");
     element.className = "announcements";

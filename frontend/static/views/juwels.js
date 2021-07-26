@@ -46,7 +46,7 @@
     }
 
     .description-block {
-      background: rgb(255, 102, 102, 0.4);
+      background: rgb(255, 102, 102, 0.2);
       color: silver;
       flex-grow: 1;
       padding: 10px;
@@ -128,7 +128,7 @@
     element.src = "static/assets/logo.jpg";
     element.className = "logo";
 
-    return element;
+    return '';
   }
 
 

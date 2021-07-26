@@ -26,7 +26,7 @@ class HomeComponent extends HTMLElement {
 
     const element = document.createElement("div");
     element.className = "images";
-    element.append(logo, this._pictureElement());
+    element.append(this._pictureElement());
 
     return element;
   }
